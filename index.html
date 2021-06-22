@@ -65,194 +65,220 @@
         <div class="row">
             <section class="col-6">
                 <form action="" method="GET" id="dataForm">
-                    <div class="form-group">
-                        <label for="city">Ville</label>
-                        <input type="text" name="city" id="city" required>
+                    <div class="step step-1 visible">
+                        <div>
+                            <h2>Vos informations</h2>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Ville</label>
+                            <input type="text" name="city" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="spot">Spot</label>
+                            <input type="text" name="spot" id="spot" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                        <div class="flex-group">
+                            <div class="form-group">
+                                <label for="startHour">Heure de début</label>
+                                <input type="time" name="startHour" id="startHour" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="endHour">Heure de fin</label>
+                                <input type="time" name="endHour" id="endHour" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="waterman">Votre Waterman Pseudo</label>
+                            <input type="text" name="waterman" id="waterman" required>
+                        </div>
+                        <a href="#" class="next">Suivant</a>
                     </div>
-                    <div class="form-group">
-                        <label for="spot">Spot</label>
-                        <input type="text" name="spot" id="spot" required>
+                    <div class="step step-2">
+                        <div>
+                            <h2>Comment était l’eau ?</h2>
+                        </div>
+                        <ul class="checklist">
+                            <li class="title">
+                                <h3>La couleur de l'eau</h3>
+                            </li>
+                            <li class="check-group">
+                                <input type="radio" name="waterColor" id="lightBlue" value="Bleue Claire" >
+                                <label for="lightBlue" class="lightBlue">Bleue Claire</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="radio" name="waterColor" id="green" value="Verte trouble" >
+                                <label for="green" class="green">Verte trouble</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="radio" name="waterColor" id="brown" value="Marron trouble" >
+                                <label for="brown" class="brown">Marron trouble</label>
+                            </li>
+                        </ul>
+                        <ul class="checklist">
+                            <li class="title">
+                                <h3>Les déchets dans l'eau</h3>
+                            </li>
+                            <li class="check-group">
+                                <input type="radio" name="waterWaste" id="noWaste" value="Sans déchets" >
+                                <label for="noWaste" class="noWaste">Sans déchets</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="radio" name="waterWaste" id="waste" value="Avec Déchet" >
+                                <label for="waste" class="waste">Avec Déchets</label>
+                            </li>
+                        </ul>
+                        <a href="#" class="next">Suivant</a>
                     </div>
-                    <div class="form-group">
-                        <label for="date">Date</label>
-                        <input type="date" name="date" id="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="startHour">Heure de début</label>
-                        <input type="time" name="startHour" id="startHour" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="endHour">Heure de fin</label>
-                        <input type="time" name="endHour" id="endHour" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="waterman">Votre Waterman Pseudo</label>
-                        <input type="text" name="waterman" id="waterman" required>
-                    </div>
-                    <ul class="checklist">
-                        <li class="title">
-                            <h2>La couleur de l'eau</h2>
-                        </li>
-                        <li class="check-group">
-                            <label for="lightBlue">Bleue Claire</label>
-                            <input type="radio" name="waterColor" id="lightBlue" value="Bleue Claire" >
-                        </li>
-                        <li class="check-group">
-                            <label for="green">Verte trouble</label>
-                            <input type="radio" name="waterColor" id="green" value="Verte trouble" >
-                        </li>
-                        <li class="check-group">
-                            <label for="brown">Marron trouble</label>
-                            <input type="radio" name="waterColor" id="brown" value="Marron trouble" >
-                        </li>
-                    </ul>
-                    <ul class="checklist">
-                        <li class="title">
-                            <h2>Les déchets dans l'eau</h2>
-                        </li>
-                        <li class="check-group">
-                            <label for="noWaste">Sans déchets</label>
-                            <input type="radio" name="waterWaste" id="noWaste" value="Sans déchets" >
-                        </li>
-                        <li class="check-group">
-                            <label for="waste">Avec Déchets</label>
-                            <input type="radio" name="waterWaste" id="waste" value="Avec Déchet" >
-                        </li>
-                    </ul>
-                    <ul class="checklist">
-                        <li class="title">
+                    <div class="step step-3">
+                        <div class="title">
                             <h2>Vos habitudes</h2>
-                        </li>
-                        <li class="check-group">
-                            <label for="sunCream">Crème solaire</label>
-                            <input type="checkbox" name="habits" id="sunCream" value="Crème solaire">
-                        </li>
-                        <li class="check-group">
-                            <label for="parfumDeodorant">Parfum / Deodorant</label>
-                            <input type="checkbox" name="habits" id="parfumDeodorant" value="Parfum / Deodorant">
-                        </li>
-                        <li class="check-group">
-                            <label for="hydratingCream">Crème hydratante</label>
-                            <input type="checkbox" name="habits" id="hydratingCream" value="Crème hydratante">
-                        </li>
-                        <li class="check-group">
-                            <label for="makeup">Maquillage</label>
-                            <input type="checkbox" name="habits" id="makeup" value="Maquillage">
-                        </li>
-                        <li class="check-group">
-                            <label for="refueling">Plein d’essence</label>
-                            <input type="checkbox" name="habits" id="refueling" value="Plein d’essence">
-                        </li>
-                        <li class="check-group">
-                            <label for="cigarettes">Cigarettes</label>
-                            <input type="checkbox" name="habits" id="cigarettes" value="Cigarettes">
-                        </li>
-                        <li class="check-group">
-                            <label for="pesticides">Engrais / pesticides</label>
-                            <input type="checkbox" name="habits" id="pesticides" value="Engrais / pesticides">
-                        </li>
-                        <li class="check-group">
-                            <label for="painting">Peintures</label>
-                            <input type="checkbox" name="habits" id="painting" value="Peintures">
-                        </li>
-                    </ul>
-                    <div>
-                        <h2>La fréquentation de l'eau</h2>
+                        </div>
+                        <ul class="checklist">
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="sunCream" value="Crème solaire">
+                                <label for="sunCream" class="sunCream">Crème solaire</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="parfumDeodorant" value="Parfum / Deodorant">
+                                <label for="parfumDeodorant" class="parfumDeodorant">Parfum / Deodorant</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="hydratingCream" value="Crème hydratante">
+                                <label for="hydratingCream" class="hydratingCream">Crème hydratante</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="makeup" value="Maquillage">
+                                <label for="makeup" class="makeup">Maquillage</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="refueling" value="Plein d’essence">
+                                <label for="refueling" class="refueling">Plein d’essence</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="cigarettes" value="Cigarettes">
+                                <label for="cigarettes" class="cigarettes">Cigarettes</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="pesticides" value="Engrais / pesticides">
+                                <label for="pesticides" class="pesticides">Engrais / pesticides</label>
+                            </li>
+                            <li class="check-group">
+                                <input type="checkbox" name="habits" id="painting" value="Peintures">
+                                <label for="painting" class="painting">Peintures</label>
+                            </li>
+                        </ul>
+                        <a href="#" class="next">Suivant</a>
                     </div>
-                    <ul class="checklist">
-                        <li class="title">
-                            <h2>Les baigneurs</h2>
-                        </li>
-                        <li class="check-group">
-                            <label for="fiveBathers">&le; 5</label>
-                            <input type="radio" name="attendanceBathers" id="fiveBathers" value="&le; 5">
-                        </li>
-                        <li class="check-group">
-                            <label for="fivetotwentyBathers">5 à 20</label>
-                            <input type="radio" name="attendanceBathers" id="fivetotwentyBathers" value="5 à 20">
-                        </li>
-                        <li class="check-group">
-                            <label for="fivetofiftyBathers">20 à 50</label>
-                            <input type="radio" name="attendanceBathers" id="fivetofiftyBathers" value="20 à 50">
-                        </li>
-                        <li class="check-group">
-                            <label for="morefiftyBathers">&ge; 50</label>
-                            <input type="radio" name="attendanceBathers" id="morefiftyBathers" value="&ge; 50">
-                        </li>
-                    </ul>
-                    <ul class="checklist">
-                        <li class="title">
-                            <h2>Les pratiquants d'activités nautiques</h2>
-                        </li>
-                        <li class="check-group">
-                            <label for="fiveAthletic">&le; 5</label>
-                            <input type="radio" name="attendanceAthletic" id="fiveAthletic" value="&le; 5">
-                        </li>
-                        <li class="check-group">
-                            <label for="fivetotwentyAthletic">5 à 20</label>
-                            <input type="radio" name="attendanceAthletic" id="fivetotwentyAthletic" value="5 à 20">
-                        </li>
-                        <li class="check-group">
-                            <label for="fivetofiftyAthletic">20 à 50</label>
-                            <input type="radio" name="attendanceAthletic" id="fivetofiftyAthletic" value="20 à 50">
-                        </li>
-                        <li class="check-group">
-                            <label for="morefiftyAthletic">&ge; 50</label>
-                            <input type="radio" name="attendanceAthletic" id="morefiftyAthletic" value="&ge; 50">
-                        </li>
-                    </ul>
-                    <ul class="checklist">
-                        <li class="title">
-                            <h2>Les bateaux</h2>
-                        </li>
-                        <li class="check-group">
-                            <label for="angling">Pêches</label>
-                            <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux de pêche">
-                            <ul>
-                                <li class="check-group">
-                                    <label for="zerotooneangling">0 à 1</label>
-                                    <input type="radio" name="attendanceBoatAngling" id="zerotooneangling" value="0 à 1">
-                                </li>
-                                <li class="check-group">
-                                    <label for="moretwoangling">&ge; 2</label>
-                                    <input type="radio" name="attendanceBoatAngling" id="moretwoangling" value="&ge; 2">
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="check-group">
-                            <label for="boatsHobbies">Loisir</label>
-                            <input type="checkbox" name="attendanceBoat" id="boatsHobbies" value="Bateaux de loisir">
-                            <ul>
-                                <li class="check-group">
-                                    <label for="zerotooneHobbies">0 à 1</label>
-                                    <input type="radio" name="attendanceBoatsHobbies" id="zerotooneHobbies" value="0 à 1">
-                                </li>
-                                <li class="check-group">
-                                    <label for="moretwoHobbies">&ge; 2</label>
-                                    <input type="radio" name="attendanceBoatsHobbies" id="moretwoHobbies" value="&ge; 2">
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="check-group">
-                            <label for="sailing">Voile</label>
-                            <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux à voile">
-                            <ul>
-                                <li class="check-group">
-                                    <label for="zerotooneSailing">0 à 1</label>
-                                    <input type="radio" name="attendanceBoatSailing" id="zerotooneSailing" value="0 à 1">
-                                </li>
-                                <li class="check-group">
-                                    <label for="moretwoSailing">&ge; 2</label>
-                                    <input type="radio" name="attendanceBoatSailing" id="moretwoSailing" value="&ge; 2">
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="form-group">
-                        <label for="note">Remaruqes</label>
-                        <input type="text" name="note" id="note">
+                    <div class="step step-4">
+                        <div>
+                            <h2>Quelle était la fréquentation du spot ?</h2>
+                        </div>
+                        <ul class="checklist">
+                            <li class="title">
+                                <h3>Baigneurs</h3>
+                            </li>
+                            <li class="check-group">
+                                <label for="fiveBathers">&le; 5</label>
+                                <input type="radio" name="attendanceBathers" id="fiveBathers" value="&le; 5">
+                            </li>
+                            <li class="check-group">
+                                <label for="fivetotwentyBathers">5 à 20</label>
+                                <input type="radio" name="attendanceBathers" id="fivetotwentyBathers" value="5 à 20">
+                            </li>
+                            <li class="check-group">
+                                <label for="fivetofiftyBathers">20 à 50</label>
+                                <input type="radio" name="attendanceBathers" id="fivetofiftyBathers" value="20 à 50">
+                            </li>
+                            <li class="check-group">
+                                <label for="morefiftyBathers">&ge; 50</label>
+                                <input type="radio" name="attendanceBathers" id="morefiftyBathers" value="&ge; 50">
+                            </li>
+                        </ul>
+                        <ul class="checklist">
+                            <li class="title">
+                                <h3>Pratiquants d'activités nautiques</h3>
+                            </li>
+                            <li class="check-group">
+                                <label for="fiveAthletic">&le; 5</label>
+                                <input type="radio" name="attendanceAthletic" id="fiveAthletic" value="&le; 5">
+                            </li>
+                            <li class="check-group">
+                                <label for="fivetotwentyAthletic">5 à 20</label>
+                                <input type="radio" name="attendanceAthletic" id="fivetotwentyAthletic" value="5 à 20">
+                            </li>
+                            <li class="check-group">
+                                <label for="fivetofiftyAthletic">20 à 50</label>
+                                <input type="radio" name="attendanceAthletic" id="fivetofiftyAthletic" value="20 à 50">
+                            </li>
+                            <li class="check-group">
+                                <label for="morefiftyAthletic">&ge; 50</label>
+                                <input type="radio" name="attendanceAthletic" id="morefiftyAthletic" value="&ge; 50">
+                            </li>
+                        </ul>
+                        <ul class="checklist">
+                            <li class="title">
+                                <h3>Bateaux</h3>
+                            </li>
+                            <li class="check-group">
+                                <label for="angling">Pêches</label>
+                                <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux de pêche">
+                                <ul>
+                                    <li class="check-group">
+                                        <label for="zerotooneangling">0 à 1</label>
+                                        <input type="radio" name="attendanceBoatAngling" id="zerotooneangling" value="0 à 1">
+                                    </li>
+                                    <li class="check-group">
+                                        <label for="moretwoangling">&ge; 2</label>
+                                        <input type="radio" name="attendanceBoatAngling" id="moretwoangling" value="&ge; 2">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="check-group">
+                                <label for="boatsHobbies">Loisir</label>
+                                <input type="checkbox" name="attendanceBoat" id="boatsHobbies" value="Bateaux de loisir">
+                                <ul>
+                                    <li class="check-group">
+                                        <label for="zerotooneHobbies">0 à 1</label>
+                                        <input type="radio" name="attendanceBoatsHobbies" id="zerotooneHobbies" value="0 à 1">
+                                    </li>
+                                    <li class="check-group">
+                                        <label for="moretwoHobbies">&ge; 2</label>
+                                        <input type="radio" name="attendanceBoatsHobbies" id="moretwoHobbies" value="&ge; 2">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="check-group">
+                                <label for="sailing">Voile</label>
+                                <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux à voile">
+                                <ul>
+                                    <li class="check-group">
+                                        <label for="zerotooneSailing">0 à 1</label>
+                                        <input type="radio" name="attendanceBoatSailing" id="zerotooneSailing" value="0 à 1">
+                                    </li>
+                                    <li class="check-group">
+                                        <label for="moretwoSailing">&ge; 2</label>
+                                        <input type="radio" name="attendanceBoatSailing" id="moretwoSailing" value="&ge; 2">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a href="#" class="next">Suivant</a>
                     </div>
-                    <button type="submit">Envoyer le formulaire</button>
+                    <div class="step step-5">
+                        <h2>Avez-vous une remarque à ajouter ? </h2>
+                        <p>
+                            Y-a-til des sources de pollution possibles à proximité ? Un élément intéressant le jour ou la veille de l’incubation (mousse, ordeurs,...) ?
+                        </p>
+                        <div class="form-group">
+                            <label for="note">Des remarques :</label>
+                            <textarea id="note" name="note" placeholder="Ajouter votre remarque"></textarea>
+                        </div>
+                        <button type="submit" class="btn dark-blue">Terminer</button>
+                    </div>
                 </form>
             </section>
         </div>   

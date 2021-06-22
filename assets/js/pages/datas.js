@@ -4,7 +4,22 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const APIURL = 'https://60d0629b7de0b200171087c0.mockapi.io/';
     const searchData = document.querySelector('#searchData');
     const dataForm = document.querySelector('#dataForm');
+    const steps = document.querySelectorAll('.step');
     /* Fonctions */
+
+    const nextStep = () => {
+        console.log(steps);
+        for(let step of steps){
+            let next = step.querySelector('.next');
+            if(next != null){
+                next.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    next.parentNode.classList.remove('visible');
+                    next.parentNode.nextElementSibling.classList.add('visible');
+                });
+            } 
+        }
+    }
 
     const userSubmit = () => {
         dataForm.addEventListener('submit', (event)=>{
@@ -71,5 +86,5 @@ document.addEventListener('DOMContentLoaded', ()=> {
     };
 
     userSubmit();
-    
+    nextStep();
 });
