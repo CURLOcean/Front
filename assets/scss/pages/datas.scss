@@ -331,7 +331,7 @@
             font-weight: 500;
             font-size: 25px;
             color: $spphire;
-            margin: 70px 0 40px;
+            margin: 70px 0 0;
         }
         h3{
             font-weight: 500;
@@ -363,6 +363,81 @@
                 label{
                     font-weight: 500;
                     font-size: 15px;
+                }
+            }
+            &:nth-of-type(3){
+                input{
+                    display: none;
+                }
+                .labelBoats{
+                    display: block;
+                    background: rgba(255, 255, 255, 0.7);
+                    border-radius: 10px;
+                    width: 86px;
+                    font-size: 15px;
+                    padding-top: 15px;
+                    padding-bottom: 5px;
+                    text-align: center;
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        margin: 0 auto;
+                        background-position: center center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                    &.anglingBoats{
+                        &::before{
+                            background-image: url(../../img/icons/fish.svg);
+                        }
+                    }
+                    &.hobbiesBoats{
+                        &::before{
+                            background-image: url(../../img/icons/loisir.svg);
+                        }
+                    }
+                    &.sailingBoats{
+                        &::before{
+                            background-image: url(../../img/icons/voile.svg);
+                        }
+                    }
+                }
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    label{
+                        font-weight: 500;
+                        font-size: 15px;
+                    }
+                    .progress{
+                        margin-top: 24px;
+                        .bar{
+                            height: 2px;
+                            img{
+                                width: 19px;
+                                bottom: -7px;
+                                &.one{
+                                    left: 0;
+                                }
+                                &.two{
+                                    left: 100%;
+                                    transform: translateX(-100%);
+                                }
+                            }
+                            .filled{
+                                &.one{
+                                    width: 0;
+                                }
+                                &.two{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .progress{

@@ -106,7 +106,7 @@
                                 <h3>La couleur de l'eau</h3>
                             </li>
                             <li class="check-group">
-                                <input type="radio" name="waterColor" id="lightBlue" value="Bleue Claire" >
+                                <input type="radio" name="waterColor" id="lightBlue" value="Bleue Claire" checked>
                                 <label for="lightBlue" class="lightBlue">Bleue Claire</label>
                             </li>
                             <li class="check-group">
@@ -123,7 +123,7 @@
                                 <h3>Les déchets dans l'eau</h3>
                             </li>
                             <li class="check-group">
-                                <input type="radio" name="waterWaste" id="noWaste" value="Sans déchets" >
+                                <input type="radio" name="waterWaste" id="noWaste" value="Sans déchets" checked>
                                 <label for="noWaste" class="noWaste">Sans déchets</label>
                             </li>
                             <li class="check-group">
@@ -236,12 +236,18 @@
                                 <h3>Bateaux</h3>
                             </li>
                             <li class="check-group">
-                                <label for="angling">Pêches</label>
-                                <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux de pêche">
+                                <label for="angling" class="labelBoats anglingBoats">De pêches</label>
+                                <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux de pêche" checked>
                                 <ul>
+                                    <li class="progress">
+                                        <div class="bar">
+                                            <div class="filled"></div>
+                                            <img src="./assets/img/icons/round.svg" alt="">
+                                        </div>
+                                    </li>
                                     <li class="check-group">
                                         <label for="zerotooneangling">0 à 1</label>
-                                        <input type="radio" name="attendanceBoatAngling" id="zerotooneangling" value="0 à 1">
+                                        <input type="radio" name="attendanceBoatAngling" id="zerotooneangling" value="0 à 1" checked>
                                     </li>
                                     <li class="check-group">
                                         <label for="moretwoangling">&ge; 2</label>
@@ -250,12 +256,18 @@
                                 </ul>
                             </li>
                             <li class="check-group">
-                                <label for="boatsHobbies">Loisir</label>
-                                <input type="checkbox" name="attendanceBoat" id="boatsHobbies" value="Bateaux de loisir">
+                                <label for="boatsHobbies" class="labelBoats hobbiesBoats">De loisir</label>
+                                <input type="checkbox" name="attendanceBoat" id="boatsHobbies" value="Bateaux de loisir" checked>
                                 <ul>
+                                    <li class="progress">
+                                        <div class="bar">
+                                            <div class="filled"></div>
+                                            <img src="./assets/img/icons/round.svg" alt="">
+                                        </div>
+                                    </li>
                                     <li class="check-group">
                                         <label for="zerotooneHobbies">0 à 1</label>
-                                        <input type="radio" name="attendanceBoatsHobbies" id="zerotooneHobbies" value="0 à 1">
+                                        <input type="radio" name="attendanceBoatsHobbies" id="zerotooneHobbies" value="0 à 1" checked>
                                     </li>
                                     <li class="check-group">
                                         <label for="moretwoHobbies">&ge; 2</label>
@@ -264,12 +276,18 @@
                                 </ul>
                             </li>
                             <li class="check-group">
-                                <label for="sailing">Voile</label>
-                                <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux à voile">
+                                <label for="sailing" class="labelBoats sailingBoats">De voile</label>
+                                <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux à voile" checked>
                                 <ul>
+                                    <li class="progress">
+                                        <div class="bar">
+                                            <div class="filled"></div>
+                                            <img src="./assets/img/icons/round.svg" alt="">
+                                        </div>
+                                    </li>
                                     <li class="check-group">
                                         <label for="zerotooneSailing">0 à 1</label>
-                                        <input type="radio" name="attendanceBoatSailing" id="zerotooneSailing" value="0 à 1">
+                                        <input type="radio" name="attendanceBoatSailing" id="zerotooneSailing" value="0 à 1" checked>
                                     </li>
                                     <li class="check-group">
                                         <label for="moretwoSailing">&ge; 2</label>

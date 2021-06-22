@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const steps = document.querySelectorAll('.step');
     const bathers = document.querySelectorAll('[name="attendanceBathers"]');
     const athletic = document.querySelectorAll('[name="attendanceAthletic"]');
+    const angling = document.querySelectorAll('[name="attendanceBoatAngling"]');
+    const hobbies = document.querySelectorAll('[name="attendanceBoatsHobbies"]');
+    const sailing = document.querySelectorAll('[name="attendanceBoatSailing"]');
     /* Fonctions */
 
     const nextStep = () => {
@@ -68,6 +71,16 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     barCursor.classList.remove('two');
                     barCursor.classList.add('three');
                     barCursor.classList.remove('zero');
+                }else if(item.value === "≥ 2"){
+                    img.classList.remove('one');
+                    img.classList.add('two');
+                    barCursor.classList.remove('one');
+                    barCursor.classList.add('two');
+                }else if(item.value === "0 à 1"){
+                    img.classList.add('one');
+                    img.classList.remove('two');
+                    barCursor.classList.add('one');
+                    barCursor.classList.remove('two');
                 }
             })
         }
@@ -141,4 +154,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     nextStep();
     ProgressBar(bathers);
     ProgressBar(athletic);
+    ProgressBar(angling);
+    ProgressBar(hobbies);
+    ProgressBar(sailing);
 });

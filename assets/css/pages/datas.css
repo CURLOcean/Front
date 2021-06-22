@@ -217,7 +217,7 @@
     font-weight: 500;
     font-size: 25px;
     color: #052356;
-    margin: 70px 0 40px; }
+    margin: 70px 0 0; }
   .step.step-4 h3 {
     font-weight: 500;
     font-size: 20px;
@@ -240,6 +240,56 @@
     .step.step-4 .checklist:nth-of-type(2) label {
       font-weight: 500;
       font-size: 15px; }
+    .step.step-4 .checklist:nth-of-type(3) input {
+      display: none; }
+    .step.step-4 .checklist:nth-of-type(3) .labelBoats {
+      display: block;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      width: 86px;
+      font-size: 15px;
+      padding-top: 15px;
+      padding-bottom: 5px;
+      text-align: center; }
+      .step.step-4 .checklist:nth-of-type(3) .labelBoats::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat; }
+      .step.step-4 .checklist:nth-of-type(3) .labelBoats.anglingBoats::before {
+        background-image: url(../../img/icons/fish.svg); }
+      .step.step-4 .checklist:nth-of-type(3) .labelBoats.hobbiesBoats::before {
+        background-image: url(../../img/icons/loisir.svg); }
+      .step.step-4 .checklist:nth-of-type(3) .labelBoats.sailingBoats::before {
+        background-image: url(../../img/icons/voile.svg); }
+    .step.step-4 .checklist:nth-of-type(3) ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .step.step-4 .checklist:nth-of-type(3) ul label {
+        font-weight: 500;
+        font-size: 15px; }
+      .step.step-4 .checklist:nth-of-type(3) ul .progress {
+        margin-top: 24px; }
+        .step.step-4 .checklist:nth-of-type(3) ul .progress .bar {
+          height: 2px; }
+          .step.step-4 .checklist:nth-of-type(3) ul .progress .bar img {
+            width: 19px;
+            bottom: -7px; }
+            .step.step-4 .checklist:nth-of-type(3) ul .progress .bar img.one {
+              left: 0; }
+            .step.step-4 .checklist:nth-of-type(3) ul .progress .bar img.two {
+              left: 100%;
+              transform: translateX(-100%); }
+          .step.step-4 .checklist:nth-of-type(3) ul .progress .bar .filled.one {
+            width: 0; }
+          .step.step-4 .checklist:nth-of-type(3) ul .progress .bar .filled.two {
+            width: 100%; }
     .step.step-4 .checklist .progress {
       min-width: 100%; }
       .step.step-4 .checklist .progress .bar {
