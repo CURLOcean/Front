@@ -347,6 +347,79 @@
             .title{
                 min-width: 100%;
             }
+            &:nth-of-type(1){
+                input{
+                    display: none;
+                }
+                label{
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+            &:nth-of-type(2){
+                input{
+                    display: none;
+                }
+                label{
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+            .progress{
+                min-width: 100%;
+                .bar{
+                    width: 100%;
+                    height: 6px;
+                    background-color: $darkBlue;
+                    border-radius: 100px;
+                    margin-bottom: 8px;
+                    position: relative;
+                    .filled{
+                        height: 100%;
+                        width: 0;
+                        background-color: $babyBlue;
+                        border-radius: 100px 0 0 100px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transition: all 0.5s ease-in-out;
+                        &.zero{
+                            width: 0;
+                        }
+                        &.one{
+                            width: 33.333%;
+                        }
+                        &.two{
+                            width: 66.66%;
+                        }
+                        &.three{
+                            width: 100%;
+                        }
+                    }
+                    img{
+                        width:24px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transition: all 0.5s ease-in-out;
+                        &.zero{
+                            left: 0;
+                        }
+                        &.one{
+                            left: 33.333%;
+                            transform: translateX(-10%);
+                        }
+                        &.two{
+                            left: 66.66%;
+                            transform: translateX(-10%);
+                        }
+                        &.three{
+                            left: 100%;
+                            transform: translateX(-100%);
+                        }
+                    }
+                }
+            }
         }
     }
     &.step-5{

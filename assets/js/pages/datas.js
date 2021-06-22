@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const searchData = document.querySelector('#searchData');
     const dataForm = document.querySelector('#dataForm');
     const steps = document.querySelectorAll('.step');
+    const bathers = document.querySelectorAll('[name="attendanceBathers"]');
+    const athletic = document.querySelectorAll('[name="attendanceAthletic"]');
     /* Fonctions */
 
     const nextStep = () => {
@@ -18,6 +20,56 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     next.parentNode.nextElementSibling.classList.add('visible');
                 });
             } 
+        }
+    }
+
+    const ProgressBar = (items) => {
+        for(let item of items){
+            item.addEventListener('click', (event) => {
+                let progress =  item.parentNode.parentNode.querySelector('.progress');
+                let img = progress.querySelector('img');
+                let barCursor = progress.querySelector('.filled');
+                if(item.value === "≤ 5"){
+                    img.classList.remove('one');
+                   img.classList.remove('two');
+                   img.classList.remove('three');
+                   img.classList.add('zero');
+                   barCursor.classList.remove('one');
+                   barCursor.classList.remove('two');
+                   barCursor.classList.remove('three');
+                   barCursor.classList.add('zero');
+                }
+                else if(item.value === "5 à 20"){
+                    img.classList.add('one');
+                   img.classList.remove('two');
+                   img.classList.remove('three');
+                   img.classList.remove('zero');
+                   barCursor.classList.add('one');
+                   barCursor.classList.remove('two');
+                   barCursor.classList.remove('three');
+                   barCursor.classList.remove('zero');
+
+                }else if(item.value === "20 à 50"){
+                    img.classList.remove('one');
+                   img.classList.add('two');
+                   img.classList.remove('three');
+                   img.classList.remove('zero');
+                   barCursor.classList.remove('one');
+                   barCursor.classList.add('two');
+                   barCursor.classList.remove('three');
+                   barCursor.classList.remove('zero');
+
+                }else if(item.value === "≥ 50"){
+                    img.classList.remove('one');
+                    img.classList.remove('two');
+                    img.classList.add('three');
+                    img.classList.remove('zero');
+                    barCursor.classList.remove('one');
+                    barCursor.classList.remove('two');
+                    barCursor.classList.add('three');
+                    barCursor.classList.remove('zero');
+                }
+            })
         }
     }
 
@@ -87,4 +139,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     userSubmit();
     nextStep();
+    ProgressBar(bathers);
+    ProgressBar(athletic);
 });

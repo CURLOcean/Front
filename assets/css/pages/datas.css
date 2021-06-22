@@ -230,6 +230,59 @@
     flex-wrap: wrap; }
     .step.step-4 .checklist .title {
       min-width: 100%; }
+    .step.step-4 .checklist:nth-of-type(1) input {
+      display: none; }
+    .step.step-4 .checklist:nth-of-type(1) label {
+      font-weight: 500;
+      font-size: 15px; }
+    .step.step-4 .checklist:nth-of-type(2) input {
+      display: none; }
+    .step.step-4 .checklist:nth-of-type(2) label {
+      font-weight: 500;
+      font-size: 15px; }
+    .step.step-4 .checklist .progress {
+      min-width: 100%; }
+      .step.step-4 .checklist .progress .bar {
+        width: 100%;
+        height: 6px;
+        background-color: #052356;
+        border-radius: 100px;
+        margin-bottom: 8px;
+        position: relative; }
+        .step.step-4 .checklist .progress .bar .filled {
+          height: 100%;
+          width: 0;
+          background-color: #5BA0FC;
+          border-radius: 100px 0 0 100px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: all 0.5s ease-in-out; }
+          .step.step-4 .checklist .progress .bar .filled.zero {
+            width: 0; }
+          .step.step-4 .checklist .progress .bar .filled.one {
+            width: 33.333%; }
+          .step.step-4 .checklist .progress .bar .filled.two {
+            width: 66.66%; }
+          .step.step-4 .checklist .progress .bar .filled.three {
+            width: 100%; }
+        .step.step-4 .checklist .progress .bar img {
+          width: 24px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: all 0.5s ease-in-out; }
+          .step.step-4 .checklist .progress .bar img.zero {
+            left: 0; }
+          .step.step-4 .checklist .progress .bar img.one {
+            left: 33.333%;
+            transform: translateX(-10%); }
+          .step.step-4 .checklist .progress .bar img.two {
+            left: 66.66%;
+            transform: translateX(-10%); }
+          .step.step-4 .checklist .progress .bar img.three {
+            left: 100%;
+            transform: translateX(-100%); }
   .step.step-5.visible::before {
     animation: Wave0 0.5s ease-in-out forwards; }
   .step.step-5 h2 {
