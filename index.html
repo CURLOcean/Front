@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
+    <title>Mon Society</title>
+    <link rel="stylesheet" href="./assets/css/general/reset.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/grid/grid.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/general/general.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/pages/datas.css" type="text/css">
+    
+    <link rel="shortcut icon" href="./assets/img/logo/icons/icon-72x72.png" type="image/png">
+
+    <!-- Add Web App Manifest -->
+    <!-- <link rel="manifest" href="manifest.json"> -->
+
+    <!-- Define color theme -->
+    <meta name="theme-color" content="#F5E8B7">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="msapplication-starturl" content="./index.html">
+
+    <!-- Apple -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MySociety">
+    <meta name="application-name" content="MySociety">
+    <meta name="apple-mobile-web-app-title" content="MySociety">
+
+    <!-- Define icons -->
+    <link rel="icon" sizes="192x192" href="./assets/img/logo/icons/icon-192x192.png">
+    <link rel="icon" sizes="128x128" href="./assets/img/logo/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="./assets/img/logo/iconsicon-128x128.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="./assets/img/logo/icons/icon-128x128.png">
+
+    <!-- Iphone splashscreens -->
+    <link rel="apple-touch-startup-image" href="./assets/splashscreens/iphone5_splash.svg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="./assets/splashscreens/iphone6_splash.svg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" href="./assets/splashscreens/iphoneplus_splash.svg" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" />
+    <link rel="apple-touch-startup-image" href="./assets/splashscreens/iphonex_splash.svg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" />
+    <!-- <script>
+        // This is the service worker with the Cache-first network
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+  
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+          if (navigator.serviceWorker.controller) {
+            console.log("[PWA Builder] active service worker found, no need to register");
+          } else {
+            // Register the service worker
+            navigator.serviceWorker
+              .register("./service-worker.js", {
+                scope: "./"
+              })
+              .then(function (reg) {
+                console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+              });
+          }
+        }
+      </script> -->
+</head>
+<body>
+    <header></header>
+    <main class="container"> 
+        <div class="row">
+            <section class="col-6">
+                <form action="" method="GET" id="dataForm">
+                    <div class="form-group">
+                        <label for="city">Ville</label>
+                        <input type="text" name="city" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="spot">Spot</label>
+                        <input type="text" name="spot" id="spot" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startHour">Heure de début</label>
+                        <input type="time" name="startHour" id="startHour" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endHour">Heure de fin</label>
+                        <input type="time" name="endHour" id="endHour" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="waterman">Votre Waterman Pseudo</label>
+                        <input type="text" name="waterman" id="waterman" required>
+                    </div>
+                    <ul class="checklist">
+                        <li class="title">
+                            <h2>La couleur de l'eau</h2>
+                        </li>
+                        <li class="check-group">
+                            <label for="lightBlue">Bleue Claire</label>
+                            <input type="radio" name="waterColor" id="lightBlue" value="Bleue Claire" >
+                        </li>
+                        <li class="check-group">
+                            <label for="green">Verte trouble</label>
+                            <input type="radio" name="waterColor" id="green" value="Verte trouble" >
+                        </li>
+                        <li class="check-group">
+                            <label for="brown">Marron trouble</label>
+                            <input type="radio" name="waterColor" id="brown" value="Marron trouble" >
+                        </li>
+                    </ul>
+                    <ul class="checklist">
+                        <li class="title">
+                            <h2>Les déchets dans l'eau</h2>
+                        </li>
+                        <li class="check-group">
+                            <label for="noWaste">Sans déchets</label>
+                            <input type="radio" name="waterWaste" id="noWaste" value="Sans déchets" >
+                        </li>
+                        <li class="check-group">
+                            <label for="waste">Avec Déchets</label>
+                            <input type="radio" name="waterWaste" id="waste" value="Avec Déchet" >
+                        </li>
+                    </ul>
+                    <ul class="checklist">
+                        <li class="title">
+                            <h2>Vos habitudes</h2>
+                        </li>
+                        <li class="check-group">
+                            <label for="sunCream">Crème solaire</label>
+                            <input type="checkbox" name="habits" id="sunCream" value="Crème solaire">
+                        </li>
+                        <li class="check-group">
+                            <label for="parfumDeodorant">Parfum / Deodorant</label>
+                            <input type="checkbox" name="habits" id="parfumDeodorant" value="Parfum / Deodorant">
+                        </li>
+                        <li class="check-group">
+                            <label for="hydratingCream">Crème hydratante</label>
+                            <input type="checkbox" name="habits" id="hydratingCream" value="Crème hydratante">
+                        </li>
+                        <li class="check-group">
+                            <label for="makeup">Maquillage</label>
+                            <input type="checkbox" name="habits" id="makeup" value="Maquillage">
+                        </li>
+                        <li class="check-group">
+                            <label for="refueling">Plein d’essence</label>
+                            <input type="checkbox" name="habits" id="refueling" value="Plein d’essence">
+                        </li>
+                        <li class="check-group">
+                            <label for="cigarettes">Cigarettes</label>
+                            <input type="checkbox" name="habits" id="cigarettes" value="Cigarettes">
+                        </li>
+                        <li class="check-group">
+                            <label for="pesticides">Engrais / pesticides</label>
+                            <input type="checkbox" name="habits" id="pesticides" value="Engrais / pesticides">
+                        </li>
+                        <li class="check-group">
+                            <label for="painting">Peintures</label>
+                            <input type="checkbox" name="habits" id="painting" value="Peintures">
+                        </li>
+                    </ul>
+                    <div>
+                        <h2>La fréquentation de l'eau</h2>
+                    </div>
+                    <ul class="checklist">
+                        <li class="title">
+                            <h2>Les baigneurs</h2>
+                        </li>
+                        <li class="check-group">
+                            <label for="fiveBathers">&le; 5</label>
+                            <input type="radio" name="attendanceBathers" id="fiveBathers" value="&le; 5">
+                        </li>
+                        <li class="check-group">
+                            <label for="fivetotwentyBathers">5 à 20</label>
+                            <input type="radio" name="attendanceBathers" id="fivetotwentyBathers" value="5 à 20">
+                        </li>
+                        <li class="check-group">
+                            <label for="fivetofiftyBathers">20 à 50</label>
+                            <input type="radio" name="attendanceBathers" id="fivetofiftyBathers" value="20 à 50">
+                        </li>
+                        <li class="check-group">
+                            <label for="morefiftyBathers">&ge; 50</label>
+                            <input type="radio" name="attendanceBathers" id="morefiftyBathers" value="&ge; 50">
+                        </li>
+                    </ul>
+                    <ul class="checklist">
+                        <li class="title">
+                            <h2>Les pratiquants d'activités nautiques</h2>
+                        </li>
+                        <li class="check-group">
+                            <label for="fiveAthletic">&le; 5</label>
+                            <input type="radio" name="attendanceAthletic" id="fiveAthletic" value="&le; 5">
+                        </li>
+                        <li class="check-group">
+                            <label for="fivetotwentyAthletic">5 à 20</label>
+                            <input type="radio" name="attendanceAthletic" id="fivetotwentyAthletic" value="5 à 20">
+                        </li>
+                        <li class="check-group">
+                            <label for="fivetofiftyAthletic">20 à 50</label>
+                            <input type="radio" name="attendanceAthletic" id="fivetofiftyAthletic" value="20 à 50">
+                        </li>
+                        <li class="check-group">
+                            <label for="morefiftyAthletic">&ge; 50</label>
+                            <input type="radio" name="attendanceAthletic" id="morefiftyAthletic" value="&ge; 50">
+                        </li>
+                    </ul>
+                    <ul class="checklist">
+                        <li class="title">
+                            <h2>Les bateaux</h2>
+                        </li>
+                        <li class="check-group">
+                            <label for="angling">Pêches</label>
+                            <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux de pêche">
+                            <ul>
+                                <li class="check-group">
+                                    <label for="zerotooneangling">0 à 1</label>
+                                    <input type="radio" name="attendanceBoatAngling" id="zerotooneangling" value="0 à 1">
+                                </li>
+                                <li class="check-group">
+                                    <label for="moretwoangling">&ge; 2</label>
+                                    <input type="radio" name="attendanceBoatAngling" id="moretwoangling" value="&ge; 2">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="check-group">
+                            <label for="boatsHobbies">Loisir</label>
+                            <input type="checkbox" name="attendanceBoat" id="boatsHobbies" value="Bateaux de loisir">
+                            <ul>
+                                <li class="check-group">
+                                    <label for="zerotooneHobbies">0 à 1</label>
+                                    <input type="radio" name="attendanceBoatsHobbies" id="zerotooneHobbies" value="0 à 1">
+                                </li>
+                                <li class="check-group">
+                                    <label for="moretwoHobbies">&ge; 2</label>
+                                    <input type="radio" name="attendanceBoatsHobbies" id="moretwoHobbies" value="&ge; 2">
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="check-group">
+                            <label for="sailing">Voile</label>
+                            <input type="checkbox" name="attendanceBoat" id="angling" value="Bateaux à voile">
+                            <ul>
+                                <li class="check-group">
+                                    <label for="zerotooneSailing">0 à 1</label>
+                                    <input type="radio" name="attendanceBoatSailing" id="zerotooneSailing" value="0 à 1">
+                                </li>
+                                <li class="check-group">
+                                    <label for="moretwoSailing">&ge; 2</label>
+                                    <input type="radio" name="attendanceBoatSailing" id="moretwoSailing" value="&ge; 2">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="form-group">
+                        <label for="note">Remaruqes</label>
+                        <input type="text" name="note" id="note">
+                    </div>
+                    <button type="submit">Envoyer le formulaire</button>
+                </form>
+            </section>
+        </div>   
+    </main>
+    <footer></footer>
+    <script src="./assets/js/pages/datas.js"></script>
+</body>
+</html>

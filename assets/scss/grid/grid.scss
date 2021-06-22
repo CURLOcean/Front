@@ -1,0 +1,133 @@
+/* GRILLE  */
+$container-width-xl:1440px;
+$container-width-lg:1024px;
+$container-width-sm:768px;
+$container-width-xs:100%;
+$gutter-reset-xs: -5px;
+$gutter-reset-sm: -15px;
+$gutter-xs: 5px;
+$gutter-sm: 10px;
+$margin-xs: 20px;
+$margin-sm: 22px;
+$margin-lg:30px;
+$margin-xl:46px;
+$col-number-xs:6;
+$col-number-sm:12;
+$col-number-lg: 24;
+$col-number-xl: 24;
+
+/* FIN GRILLE  */
+
+
+.container{
+  width: $container-width-xs;
+  padding-left: $margin-xs;
+  padding-right: $margin-xs;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 1px;
+  position: relative;
+}
+  
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: $gutter-reset-xs;
+  margin-right: $gutter-reset-xs;
+  min-height: 1px;
+  position: relative;
+}
+  
+
+[class^=col-]{
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: $gutter-xs;
+  padding-right: $gutter-xs;
+  position: relative;
+} 
+  
+
+@for $i from 0 through $col-number-xs{
+
+  .col-xs-#{$i}{
+    flex: 0 0 calc((100% / #{$col-number-xs} ) * #{$i});
+    max-width: calc((100% / #{$col-number-xs} ) * #{$i});
+  }
+  
+.col-xs-offset-#{$i}{
+  margin-left: calc((100% / #{$col-number-xs} ) * #{$i});
+} 
+  
+
+}
+
+@media (min-width: 768px){
+  .container{
+    width: $container-width-sm;
+    padding-left: $margin-sm;
+    padding-right: $margin-sm;
+  } 
+    
+  .row{
+    margin-left: $gutter-reset-sm;
+    margin-right: $gutter-reset-sm;
+  } 
+    
+  [class^=col-]{
+    padding-left: $gutter-sm;
+    padding-right: $gutter-sm;
+  } 
+    
+  
+  @for $i from 0 through $col-number-sm{
+    .col-sm-#{$i}{
+      flex: 0 0 calc((100% / #{$col-number-sm} ) * #{$i});
+      max-width: calc((100% / #{$col-number-sm} ) * #{$i});
+    } 
+    .col-sm-offset-#{$i}{
+      margin-left: calc((100% / #{$col-number-sm} ) * #{$i});
+    } 
+  } 
+    
+}  
+    
+      
+    
+@media (min-width: 1024px){
+  .container{
+    width: $container-width-lg;
+    padding-left: $margin-lg;
+    padding-right: $margin-lg;
+  } 
+
+  @for $i from 0 through $col-number-lg{
+    .col-lg-#{$i}{ 
+      flex: 0 0 calc((100% / #{$col-number-lg} ) * #{$i});
+      max-width: calc((100% / #{$col-number-lg} ) * #{$i});
+    }
+    .col-lg-offset-#{$i}{
+      margin-left: calc((100% / #{$col-number-lg} ) * #{$i});
+    }
+  } 
+} 
+  
+    
+
+@media (min-width: 1440px){
+  .container{
+    width: $container-width-xl;
+    padding-left: $margin-xl;
+    padding-right: $margin-xl;
+  }
+  @for $i from 0 through $col-number-xl{
+    .col-xl-#{$i}{
+      flex: 0 0 calc((100% / #{$col-number-xl} ) * #{$i});
+      max-width: calc((100% / #{$col-number-xl} ) * #{$i});
+    }
+    .col-xl-offset-#{$i}{
+      margin-left: calc((100% / #{$col-number-xl} ) * #{$i});
+    }
+  }
+}
