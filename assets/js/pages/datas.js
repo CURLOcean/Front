@@ -145,7 +145,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
                 },
                 body: JSON.stringify(datas)
               }).then(res => res.json())
-                .then(res => console.log(res))
+                .then(res => {
+                    console.log(res);
+                    location.reload();
+                })
                 .catch(err => console.log(err));
         });
     };
